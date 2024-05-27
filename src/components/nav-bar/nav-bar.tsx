@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavItem } from '../nav-item/nav-item';
 
 export const NavBar = () => {
   const [tagList, setTagList] = useState([]);
@@ -22,21 +23,7 @@ export const NavBar = () => {
   return (
     <nav>
       <ul>
-        <li className="nav_list_item">
-          <button className="list_item_btn">Все темы</button>
-        </li>
-        <li className="nav_list_item">
-          <button className="list_item_btn">Логика и мышление</button>
-        </li>
-        <li className="nav_list_item">
-          <button className="list_item_btn">Загадки</button>
-        </li>
-        <li className="nav_list_item">
-          <button className="list_item_btn">Головоломки</button>
-        </li>
-        <li className="nav_list_item">
-          <button className="list_item_btn">Путешествия</button>
-        </li>
+        {tagList.map((navItem)=><NavItem text={navItem}/>)}
       </ul>
     </nav>
   );
