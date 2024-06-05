@@ -1,19 +1,15 @@
-
 import { NavItem } from '../nav-item/nav-item';
-
-export const NavBar = ({tagList}:{tagList:string[] | undefined}) => {
-  
-  
-
+import s from './nav-bar.module.css'
+export const NavBar = ({ tagList }: { tagList: string[] | undefined }) => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <button>
-            Все темы
-          </button>
+    <nav className={s.nav}>
+      <ul className={s.nav_list}>
+        <li className={s.list_item}>
+          <button className={s.item_btn}>Все темы</button>
         </li>
-        {tagList?.map((navItem:string)=><NavItem text={navItem}/>)}
+        {tagList?.map((navItem: string) => (
+          <NavItem text={navItem} />
+        ))}
       </ul>
     </nav>
   );

@@ -1,0 +1,22 @@
+
+.nav_list{
+    border: 1px solid #CFCFE4;
+    border-radius: 18px;
+    padding: 12px;
+}
+.list_item{
+   
+
+}
+.item_btn{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #39414B;
+}
