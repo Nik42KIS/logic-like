@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export const NavItem = ({text}) => {
+export const NavItem = ({ text }:{text:string}) => {
   return (
     <li key={text}>
-        {text}
+      <button>{text}</button>
     </li>
-  )
-}
+  );
+};

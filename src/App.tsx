@@ -1,16 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { NavBar } from './components/nav-bar/nav-bar'
-
+import { fetchData, getTags } from './functions'
+import { TypeCourse } from './types';
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [tagList, setTagList] = useState<string[]>();
+  const [courseList, setCourseList] = useState<TypeCourse[]>();
+
+  useEffect(() => {
+    fetchData()
+    .then((res:TypeCourse[]) => {
+      setCourseList(res)
+      setTagList(getTags(res))
+    })
+    
+  }, []);
 
   return (
     <>
      <main>
-      <NavBar/>
+      <NavBar tagList={tagList}/>
      </main>
     </>
   )
