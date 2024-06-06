@@ -1,0 +1,23 @@
+.item{
+    border-radius:18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 10px 13px -4px rgba(35, 35, 95, 0.19);
+    align-items: center;
+}
+
+.img{
+    max-width: 144px;
+}
+
+.name{
+    width: 100%;
+    border-radius:0 0 18px 18px ;
+    height: 48px;
+    font-weight: 800;
+    font-size: 18px;
+    background-color: white;
+    padding: 12px 18px 18px 18px;
+ 
+}
