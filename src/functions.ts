@@ -19,3 +19,11 @@ export const getTags = (arr: TypeCourse[] | undefined) => {
         return tagArr;
       
 }
+
+export const filterCourses = (array:TypeCourse[], tag:string ) => {
+
+  if(tag === 'Все темы') return array
+  
+  return array.filter((el)=>el.tags.includes(tag))
+
+}
